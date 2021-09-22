@@ -1,0 +1,83 @@
+package strings;
+
+public class charstring {
+	public static void main(String[] args) {
+		char chars[]= {'a','b','c','d','e','f','g'};
+		//byte-to-string constructors
+		byte ascii[] =  {65,66,67,68,69,70};
+		
+		String s=new String(chars);
+		String s1=new String(chars,2,3);//here 2 is the startindex which the subrange begins and 3 is the no.of character to use
+		
+		String s2=new String(ascii,1,2);
+		
+		
+		
+		
+		System.out.println(s2);
+		System.out.println(s);
+		System.out.println(s1);
+		//length of a string is the no of character
+		System.out.println(s1.length());
+		System.out.println(s2.length());
+		
+		//special  string operations
+		String s3="pranita";
+		System.out.println(s3.length());
+		
+		//string Concatenation
+		String age="19";
+		String s4="she is " + age+ "years old";
+		System.out.println(s4);
+		//String Concatenation with other data types
+		String s5="four:"+(2+2);
+		System.out.println(s5);
+	
+
+	}
+
+}
+------------------------------------------
+package strings;
+
+
+
+public class charatstring {
+	public static void main(String[] args) {
+		String ch;
+		ch="pranita";
+		System.out.println(ch.charAt(2));
+		
+		
+		//getChars( )    void getChars(int sourceStart, int sourceEnd, char target[ ], int targetStart)
+		
+		String s;
+		s="precution is better then cure";
+		int start=13;
+		int end=19;
+		char buff[]=new char[end-start];
+		s.getChars(start, end, buff, 0);
+		System.out.println(buff);
+		
+		//char Bytes[]=new getbytes [end-start];
+		//s.getBytes();
+		//System.out.println(Bytes);
+	}
+
+}
+-------------------------------------------------------
+//construction one string from another
+package strings;
+
+public class makestring {
+	public static void main(String[] args) {
+		char c[]= {'j','a', 'v','a'};
+		String s1=new String(c);
+		String s2=new String(s1);
+		
+		System.out.println(s1);
+		System.out.println(s2);
+	}
+
+}
+
